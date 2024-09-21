@@ -16,16 +16,24 @@
 
 <script setup>
 import { QSpinnerGears, useQuasar } from "quasar";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import DialogPage from "../components/Dialog/DialogPage.vue";
 const $q = useQuasar();
 
-$q.notify({
-  message: "Добро пожаловать, Камила!",
-  icon: "check",
-  color: "positive",
-  timeout: 2500,
+const isSheAgreeSession = sessionStorage.getItem("agree");
+onMounted(() => {
+  checkStatus();
 });
+const checkStatus = () => {
+  if (isSheAgreeSession === null) {
+    $q.notify({
+      message: "Добро пожаловать, Камила!",
+      icon: "check",
+      color: "positive",
+      timeout: 2500,
+    });
+  }
+};
 
 $q.notify({
   message: "Нажмите на кнопку Начать",
