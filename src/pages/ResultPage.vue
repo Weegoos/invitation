@@ -21,10 +21,7 @@
                 <span class="text-bold">Вы выбрали эту дату: </span>
                 <span class="wrap-text">{{ day }}</span>
               </div>
-              <div>
-                <span class="text-bold">Вы выбрали это время: </span>
-                <span>{{ time }}</span>
-              </div>
+
               <div>
                 <span class="text-bold"> Ваши предпочтение: </span>
                 <span>{{ interests }}</span>

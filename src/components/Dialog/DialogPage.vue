@@ -31,17 +31,8 @@
           v-model="day"
           :options="dayOptions"
           multiple
-          label="Выберите дни когда можете встретиться"
+          label="Выберите дни и время когда сможете встретиться"
           filled
-        />
-        <q-select
-          v-model="time"
-          :options="timeOptions"
-          multiple
-          class="q-mt-md"
-          label="Выберите время когда можете встретиться"
-          filled
-          required
         />
         <q-input
           v-model="interests"
@@ -81,18 +72,16 @@ const props = defineProps({
 });
 
 const day = ref(null);
-const time = ref(null);
 const interests = ref("");
 const router = useRouter();
 
 const submitData = () => {
-  if (day.value != null && time.value != null && interests.value.length > 0) {
+  if (day.value != null && interests.value.length > 0) {
     $q.notify({
       message: "Отлично! Желаю хорошего настроение!",
       color: "positive",
     });
     sessionStorage.setItem("day", day.value);
-    sessionStorage.setItem("time", time.value);
     sessionStorage.setItem("interests", interests.value);
 
     setTimeout(() => {
@@ -115,7 +104,6 @@ const dayOptions = [
   "09.02.2025",
 ];
 
-const timeOptions = ["После обеда", "До обеда", "В любое время", "Другое"];
 const confirm = ref(props.openPage);
 
 watch(
