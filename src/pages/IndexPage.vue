@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-img
-      src="../assets/main/invitationMainImg.jpg"
+      src="../assets/main/rose.jpg"
       style="width: 100vw; height: 100vh"
       spinner-color="primary"
       spinner-size="82px"
