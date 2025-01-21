@@ -27,8 +27,8 @@ onMounted(() => {
 const checkStatus = () => {
   if (isSheAgreeSession === null) {
     $q.notify({
-      message: "Добро пожаловать, Камила!",
-      icon: "check",
+      message: "Добро пожаловать, Assem!",
+      icon: "cloud_done",
       color: "positive",
       timeout: 2500,
     });

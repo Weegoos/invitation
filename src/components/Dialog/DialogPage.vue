@@ -1,8 +1,9 @@
 <template>
   <q-dialog v-model="confirm" persistent>
     <q-card v-if="isAgree">
-      <q-card-section class="row items-center">
-        <span class="q-ml-sm"
+      <q-card-section>
+        <p class="text-h6 text-bold text-center">Приглашение на свидание</p>
+        <span class="text-center"
           >Было бы здорово провести время вместе! Как ты на это смотришь?</span
         >
       </q-card-section>
