@@ -19,7 +19,7 @@
               </p>
               <div style="display: block">
                 <span class="text-bold">Вы выбрали эту дату: </span>
-                <span>{{ day }}</span>
+                <span class="wrap-text">{{ day }}</span>
               </div>
               <div>
                 <span class="text-bold">Вы выбрали это время: </span>
@@ -50,4 +50,10 @@ const time = sessionStorage.getItem("time");
 const interests = sessionStorage.getItem("interests");
 </script>
 
-<style></style>
+<style scoped>
+.wrap-text {
+  width: 150px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+</style>
