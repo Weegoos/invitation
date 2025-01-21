@@ -42,8 +42,6 @@
 import { ref } from "vue";
 
 const confirm = ref(true);
-const day = sessionStorage.getItem("day");
-const time = sessionStorage.getItem("time");
 const interests = sessionStorage.getItem("interests");
 </script>
 
