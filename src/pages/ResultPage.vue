@@ -43,6 +43,7 @@ import { ref } from "vue";
 
 const confirm = ref(true);
 const interests = sessionStorage.getItem("interests");
+const day = sessionStorage.getItem("day");
 </script>
 
 <style scoped>
